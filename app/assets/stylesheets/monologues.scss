@@ -1,0 +1,33 @@
+#monologue_text {
+  background: #fff;
+  border-radius: 10px;
+  margin-top: 50px;
+}
+
+#monologue_list {
+  margin-top: 50px;
+}
+
+.content {
+  margin-top: 50px;
+}
+
+#monologue {
+  width: 95%;
+  border-bottom: 1px solid #ccc;
+  background: #fff;
+  padding: 40px;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+#button {
+  float:right;
+}
+
+#error_explanation {
+  color: #f00;
+  ul {
+    margin: 0 0 18px 0;
+  }
+}

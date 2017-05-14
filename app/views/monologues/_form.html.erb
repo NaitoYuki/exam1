@@ -1,0 +1,16 @@
+  <h2>ひとりごと</h2>
+  <%= form_for(@monologue, url: choose_new_or_edit) do |f| %>
+    <% if @monologue.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= @monologue.errors.count %>件のエラーがあります。</h2>
+        <ul>
+        <% @monologue.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+    <%= f.text_area :content,:size => "40x5" %>
+    <br>
+    <%= f.submit '投稿', class: 'btn btn-primary btn-block' %>
+  <% end %>

@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="row">
+    <div class="col-sm-4" id="monologue_text">
+        <h3>ひとりごとするアプリ</h3>
+        <p>ruby on railsサンプルアプリケーション</p>
+        <p>今までのひとりごとリスト</p>
+        <p></p>
+        <p><%= link_to "ひとりごとする", new_monologue_path %></p>
+    </div>
+    <div class="col-sm-8">
+      <div id="monologue_list">
+        <% @monologues.each do |monologue| %>
+        <div id="monologue">
+          <h3><%= monologue.content %></h3><%= monologue.created_at.strftime('%Y年%m月%d日 %H:%M') %>
+          <div id="button">
+          <%= link_to "編集", edit_monologue_path(monologue.id), class: 'btn btn-default btn-sm btn-primary' %>
+          <%= link_to "削除", monologue_path(monologue.id), method: :delete, data: { confirm: '本当に削除していいですか？' }, class: 'btn btn-default btn-sm btn-warning' %>
+          </div>
+        </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+
